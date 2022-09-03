@@ -7,6 +7,14 @@ public class CheckTheAdult {
     private String Adult;
     private String result;
 
+    public String getAdult() {
+        return Adult;
+    }
+
+    public void setAdult(String adult) {
+        Adult = adult;
+    }
+
     public String getResult() {
         return result;
     }
@@ -58,7 +66,7 @@ public class CheckTheAdult {
                 }
             }
             //Tell User, User is a Adult ? ot Not.
-            System.out.println(Adult);
+            System.out.println(this.getAdult());
         }
     }
 }

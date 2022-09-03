@@ -1,6 +1,8 @@
 package Test;
 
-
+/**
+ * Set a user info when make instance.
+ */
 public class InfoUser {
     private String name;
     private int age;
