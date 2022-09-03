@@ -16,20 +16,20 @@ public class CheckTheAdult {
     }
 
     public void Check(InfoUser user) {
-		//it is change the type userBirth int - > String
+        //it is change the type userBirth int - > String
 //		String userBirth = String.valueOf(user.getBirthday());
-		//userBirth 0~4 = Year / 4~6 = Month / 6~8 = Day
-		if (user.getBirthday() != null) {
-			String userYear = user.getBirthday().substring(0, 4);
-			String userMonth = user.getBirthday().substring(4, 6);
-			String userDay = user.getBirthday().substring(6, 8);
-			int theUserYear = Integer.parseInt(userYear);
-			int theUserMonth = Integer.parseInt(userMonth);
-			int theUserDay = Integer.parseInt(userDay);
-			int yearAge = LocalDateTime.now().getYear() - theUserYear;
-			//Change the Birth Info type to int from String
-			//Check the Age, user is Adult? or Not.
-			if (yearAge >= 20) {
+        //userBirth 0~4 = Year / 4~6 = Month / 6~8 = Day
+        if (user.getBirthday() != null) {
+            String userYear = user.getBirthday().substring(0, 4);
+            String userMonth = user.getBirthday().substring(4, 6);
+            String userDay = user.getBirthday().substring(6, 8);
+            int theUserYear = Integer.parseInt(userYear);
+            int theUserMonth = Integer.parseInt(userMonth);
+            int theUserDay = Integer.parseInt(userDay);
+            int yearAge = LocalDateTime.now().getYear() - theUserYear;
+            //Change the Birth Info type to int from String
+            //Check the Age, user is Adult? or Not.
+            if (yearAge >= 20) {
                 if (yearAge == 20) {
                     int CheckMonth = theUserMonth - LocalDateTime.now().getMonthValue();
                     if (CheckMonth == 0) {
