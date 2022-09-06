@@ -2,28 +2,22 @@ package Test;
 
 import java.time.LocalDateTime;
 
+import static Test.InfoUser.*;
+
 public class CheckTheAdult {
 
-    private String Adult;
-    private String result;
+    private static String Adult;
 
     public String getAdult() {
         return Adult;
     }
 
-    public void setAdult(String adult) {
-        Adult = adult;
+    public void setAdult(String adults) {
+        Adult = adults;
     }
 
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
-    }
-
-    public void Check(InfoUser user) {
+    CheckTheAdult() {
+        InfoUser user = new InfoUser();
         //it is change the type userBirth int - > String
 //		String userBirth = String.valueOf(user.getBirthday());
         //userBirth 0~4 = Year / 4~6 = Month / 6~8 = Day
@@ -43,26 +37,20 @@ public class CheckTheAdult {
                     if (CheckMonth == 0) {
                         int CheckDay = theUserDay - LocalDateTime.now().getDayOfMonth();
                         if (CheckDay <= 0) {
-                            result = "You are Adult.";
-                            this.setResult(result);
+                            this.setAdult("You are Adult.");
                         } else {
-                            result = "You are not Adult";
-                            this.setResult(result);
+                            this.setAdult("You are not Adult");
                         }
                     } else if (CheckMonth < 0) {
-                        result = "You are Adult.";
-                        this.setResult(result);
+                        this.setAdult("You are Adult.");
                     } else {
-                        result = "You are not Adult";
-                        this.setResult(result);
+                        this.setAdult("You are not Adult");
                     }
 
                 } else if (yearAge > 20) {
-                    result = "You are Adult";
-                    this.setResult(result);
+                    this.setAdult("You are Adult");
                 } else {
-                    result = "You are Not Adult";
-                    this.setResult(result);
+                    this.setAdult("You are Not Adult");
                 }
             }
             //Tell User, User is a Adult ? ot Not.
