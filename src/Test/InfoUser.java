@@ -7,9 +7,9 @@ import java.util.Scanner;
  */
 public class InfoUser {
     Scanner sc = new Scanner(System.in);
-    private static String name;
-    private static int age;
-    private static String birthday;
+    private  String name;
+    private  int age;
+    private  String birthday;
 
     InfoUser() {
         System.out.println("Please enter the your name ");
@@ -27,29 +27,32 @@ public class InfoUser {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String names) {
+        this.name = names;
     }
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAge(int ages) {
+        this.age = ages;
     }
 
-    public static String getBirthday() {
+    public  String getBirthday() {
         return birthday;
     }
 
+    public  void setBirthday(String birthdays) {
+        this.birthday = birthdays;
+    }
 
     //Check the input length to birthday if 8 under or over say Try Again.
     public void setBirthday(int birthday) {
         String ChangeBirthday = String.valueOf(birthday);
         if (ChangeBirthday.length() == 8) {
-            this.birthday = ChangeBirthday;
-        } else if (ChangeBirthday.length() < 8 || ChangeBirthday.length() > 8) {
+            this.setBirthday(ChangeBirthday);
+        } else {
             System.out.println("Try Again");
         }
     }

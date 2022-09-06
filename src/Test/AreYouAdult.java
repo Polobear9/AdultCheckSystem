@@ -6,6 +6,6 @@ package Test;
  */
 public class AreYouAdult {
     public static void main(String[] args) {
-        CheckTheAdult cha = new CheckTheAdult();
+        CheckTheAdult Start = new CheckTheAdult();
     }
 }

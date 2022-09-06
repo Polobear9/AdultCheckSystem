@@ -2,8 +2,6 @@ package Test;
 
 import java.time.LocalDateTime;
 
-import static Test.InfoUser.*;
-
 public class CheckTheAdult {
 
     private static String Adult;
@@ -46,14 +44,12 @@ public class CheckTheAdult {
                     } else {
                         this.setAdult("You are not Adult");
                     }
-
-                } else if (yearAge > 20) {
-                    this.setAdult("You are Adult");
-                } else {
-                    this.setAdult("You are Not Adult");
+            } else {
+                this.setAdult("You are Not Adult");
                 }
             }
             //Tell User, User is a Adult ? ot Not.
+            System.out.println("Name : " + user.getName() + ", " + "Age : " + user.getAge());
             System.out.println(this.getAdult());
         }
     }
