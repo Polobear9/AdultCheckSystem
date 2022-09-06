@@ -44,8 +44,8 @@ public class CheckTheAdult {
                     } else {
                         this.setAdult("You are not Adult");
                     }
-            } else {
-                this.setAdult("You are Not Adult");
+                } else {
+                    this.setAdult("You are Not Adult");
                 }
             }
             //Tell User, User is a Adult ? ot Not.

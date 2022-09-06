@@ -7,9 +7,9 @@ import java.util.Scanner;
  */
 public class InfoUser {
     Scanner sc = new Scanner(System.in);
-    private  String name;
-    private  int age;
-    private  String birthday;
+    private String name;
+    private int age;
+    private String birthday;
 
     InfoUser() {
         System.out.println("Please enter the your name ");
@@ -39,11 +39,11 @@ public class InfoUser {
         this.age = ages;
     }
 
-    public  String getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public  void setBirthday(String birthdays) {
+    public void setBirthday(String birthdays) {
         this.birthday = birthdays;
     }
 
