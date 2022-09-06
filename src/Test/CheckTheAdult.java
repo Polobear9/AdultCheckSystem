@@ -45,8 +45,10 @@ public class CheckTheAdult {
                         this.setAdult("You are not Adult");
                     }
                 } else {
-                    this.setAdult("You are Not Adult");
+                    this.setAdult("You are Adult");
                 }
+            }else{
+                this.setAdult("You are NOT Adult");
             }
             //Tell User, User is a Adult ? ot Not.
             System.out.println("Name : " + user.getName() + ", " + "Age : " + user.getAge());
